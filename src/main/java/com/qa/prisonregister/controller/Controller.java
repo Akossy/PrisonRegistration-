@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qa.prisonregister.prisonreg.PrisonRegister;
 
 
-@RestController
+//@RestController
 public class Controller {
 
-	private ArrayList<PrisonRegister>  registerList = new ArrayList<> ();
+	//private ArrayList<PrisonRegister>  registerList = new ArrayList<> ();
 	
 	@GetMapping ("/getRegister")
 	public ArrayList<PrisonRegister> registerList() {
