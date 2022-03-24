@@ -13,21 +13,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.qa.prisonregister.prisonreg.PrisonRegister;
+import com.qa.prisonregister.services.Services;
 
 @RestController
 public class ControllerRE {
 
-	private ArrayList<PrisonRegister>  registerList = new ArrayList<> ();
+	//private ArrayList<PrisonRegister>  registerList = new ArrayList<> ();
 	
+	
+	
+	private Services service;
+	
+	
+	public ControllerRE(Services service) {
+		super();
+		this.service = service;
+	}
+
 	
 	@PostMapping("/createRegister")
 	public ResponseEntity<String> createRegister(@RequestBody PrisonRegister register) {
 		System.out.println(register);
 		
 	
-		register.setId(registerList.size() + 1);
-		registerList.add(register);
+		//register.setId(registerList.size() + 1);
+		//registerList.add(register);
 		
+		service.createRegister(register);
 
 		ResponseEntity<String> response = new ResponseEntity<String>("Prisoner added with ID: " + register.getPrisonerId(), HttpStatus.CREATED);
 		return response;
@@ -38,7 +50,10 @@ public class ControllerRE {
 	public ResponseEntity<ArrayList<PrisonRegister>> getRegister() {
 		
 		
-		return new ResponseEntity<>(registerList, HttpStatus.ACCEPTED );
+		ArrayList<PrisonRegister> response = service.getRegister();
+		
+		
+		return new ResponseEntity<>(response, HttpStatus.ACCEPTED );
 		
 	}
 	
@@ -46,7 +61,7 @@ public class ControllerRE {
 	@GetMapping("/get/{index}")
 	public ResponseEntity<PrisonRegister> getbyIndex(@PathVariable("index") int index) {
 		
-		PrisonRegister result = registerList.get(index);
+		PrisonRegister result = service.getbyIndex(index);
 		
 		ResponseEntity<PrisonRegister> response = new ResponseEntity<>(result, HttpStatus.OK);
 	
@@ -55,7 +70,7 @@ public class ControllerRE {
 	@DeleteMapping("/delete/{index}")
 	public ResponseEntity<String> deletebyIndex(@PathVariable("index") int index) {
 		
-		registerList.remove(index);
+		service.remove(index);
 		
 		return new ResponseEntity<>("Prisoner information with index" + index + "deleted", HttpStatus.ACCEPTED);
 		
@@ -64,7 +79,7 @@ public class ControllerRE {
 	@DeleteMapping("/deleteAll")
 	public ResponseEntity<String> deleteAll() {
 		
-		registerList.clear();
+		service.clear();
 		
 		return new ResponseEntity<>("All Prisoner information deleted. If this action was made in error or as a result of a cyber attack, remove portable harddrive, report to Cyber Unit", HttpStatus.ACCEPTED);
 		
@@ -73,7 +88,7 @@ public class ControllerRE {
 	@PutMapping ("/update/{index}")
 	public ResponseEntity<String> updatebyIndex(@PathVariable("index") int index, @RequestBody PrisonRegister register) {
 		
-		registerList.set(index, register);
+		service.set(index, register);
 		
 		return new ResponseEntity<>("Prisoner " + index + " information updated. ", HttpStatus.OK);
 		
