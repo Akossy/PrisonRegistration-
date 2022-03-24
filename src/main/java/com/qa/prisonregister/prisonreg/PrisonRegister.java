@@ -194,9 +194,15 @@ public class PrisonRegister {
 				+ ", daysinSolitaryConfinement=" + daysinSolitaryConfinement + ", gangMember=" + gangMember
 				+ ", suicideWatch=" + suicideWatch + ", repeatVisitor=" + repeatVisitor + "]";
 	}
+
+
+	public void setId(int i) {
+		// TODO Auto-generated method stub
 		
-	    
-		
+	}
+
+
+	
 
 	}
 		
