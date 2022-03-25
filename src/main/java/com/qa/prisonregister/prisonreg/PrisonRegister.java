@@ -2,18 +2,49 @@ package com.qa.prisonregister.prisonreg;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
 public class PrisonRegister {
 	
 	
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private long PrisonerId;
+	
+	
+	@Column(nullable = false)
 		private String name;
+	
+	@Column(nullable = false)
 		private String crime; 
+	
+	@Column(nullable = false)
 	    private String reasonInSolitaryConfinement;
+	
+	@Column(nullable = false)
 	    private String  wardRelocationOnceReleased;
+	
+	@Column(nullable = false)
 	    float totalPrisonSentenceInMonths;
+	
+	@Column(nullable = false)
 	    float daysinSolitaryConfinement;
+	
+	@Column(nullable = false)
 	    boolean gangMember;
+	
+	@Column(nullable = false)
 	    boolean suicideWatch;
+	
+	@Column(nullable = false)
 	    boolean repeatVisitor;
 		
 	    

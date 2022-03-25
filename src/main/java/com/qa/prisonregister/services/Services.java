@@ -5,10 +5,27 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import com.qa.prisonregister.prisonreg.PrisonRegister;
+import com.qa.prisonregister.repo.Repo;
 
-@Service
+//@Service
 public class Services {
+	
+	
+	
+	private Repo repo;
+	
+	
+	public Services(Repo repo) {
+		super();
+		this.repo = repo;
+	}
 
+	
+	public boolean createRegisterDB(PrisonRegister register) {
+		repo.save(register);
+		return true;
+	}
+	
 	
 	private ArrayList<PrisonRegister>  registerList = new ArrayList<> ();
 	
