@@ -37,22 +37,18 @@ Get All Register
 
 Delete by Id
 
-![delete]
+![delete](https://i.imgur.com/BPRr3hq.png)
 
-
-
-
-
-
+![deleted](https://i.imgur.com/hoaTjrc.png)
 
 
 **Screenshots of your database to prove that data is being persisted.**
 --
-
+![data](https://i.imgur.com/y5E42oP.png)
 
 **Screenshot of your test results, including coverage report.**
 --
-
+![test](https://i.imgur.com/r76PlBw.png)
 
 **Link to Jira Board - You must add your trainer(s) as collaborators also.**
 --
