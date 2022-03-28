@@ -35,7 +35,7 @@ Get All Register
 ![reg](https://i.imgur.com/nQAO75B.png)
 
 
-Delete by Id
+Delete By Id
 
 ![delete](https://i.imgur.com/BPRr3hq.png)
 
