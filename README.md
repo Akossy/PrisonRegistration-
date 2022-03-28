@@ -45,4 +45,4 @@ https://trello.com/b/VHiogHJf/prisonregisterboard
 
 **Risk Assessment**
 --
-![Risk] (https://imgur.com/a/BiaHcBh)
+![Risk](https://imgur.com/a/BiaHcBh)
