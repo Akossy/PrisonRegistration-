@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.qa.prisonregister.prisonreg.PrisonRegister;
 import com.qa.prisonregister.services.ServiceDB;
-import com.qa.prisonregister.services.Services;
+
 
 @RestController
 public class ControllerRE {
@@ -92,7 +93,7 @@ public class ControllerRE {
 		
 		service.set(id, register);
 		
-		return new ResponseEntity<>("Prisoner " + id + " information updated. ", HttpStatus.OK);
+		return new ResponseEntity<>("Prisoner " + id + " information updated.", HttpStatus.OK);
 		
 		
 	}

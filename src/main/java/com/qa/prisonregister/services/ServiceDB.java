@@ -47,7 +47,7 @@ public class ServiceDB {
 		
 		PrisonRegister oldRegister = getbyId(id);
 		
-		oldRegister.setName(register.getName());
+		oldRegister.setprisonerName(register.getprisonerName());
 		oldRegister.setCrime(register.getCrime());
 		oldRegister.setReasonInSolitaryConfinement(register.getReasonInSolitaryConfinement());
 		oldRegister.setTotalPrisonSentenceInMonths(register.getTotalPrisonSentenceInMonths());

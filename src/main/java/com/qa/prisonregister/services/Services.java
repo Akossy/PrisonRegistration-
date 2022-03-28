@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.qa.prisonregister.prisonreg.PrisonRegister;
 import com.qa.prisonregister.repo.Repo;
 
-//@Service
+/*@Service
 public class Services {
 	
 	
@@ -70,4 +70,4 @@ public class Services {
 	
 	
 	
-}
+}*/
