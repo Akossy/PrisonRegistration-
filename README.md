@@ -30,6 +30,22 @@ I would benefit from being able to decipher error messages. Once I can read and 
 **Screenshots showing your postman requests and the output from the API.**
 --
 
+Get All Register 
+
+![reg](https://i.imgur.com/nQAO75B.png)
+
+
+Delete by Id
+
+![delete]
+
+
+
+
+
+
+
+
 **Screenshots of your database to prove that data is being persisted.**
 --
 
